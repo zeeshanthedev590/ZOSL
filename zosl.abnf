@@ -1,0 +1,28 @@
+; ABNF file for "YourLanguage"
+
+; Rules
+language          = *(comment / group / relationship)
+
+comment           = "//" *(WSP / VCHAR) CRLF
+
+group             = "@" group_name *(WSP / VCHAR) CRLF 1*field CRLF "end" group_name
+
+group_name        = 1*(ALPHA / DIGIT / "-" / "_")
+
+field             = "[" field_content "]" CRLF
+
+field_content     = *(WSP / VCHAR)
+
+relationship      = "@" group_name " -> " "@" group_name CRLF
+
+; ABNF Core Rules
+
+ALPHA             = %x41-5A / %x61-7A   ; A-Z / a-z
+DIGIT             = %x30-39             ; 0-9
+WSP               = SP / HTAB           ; Whitespace
+VCHAR             = %x21-7E             ; Visible ASCII characters (excluding: SP and CTL)
+CRLF              = CR LF                ; Newline
+CR                = %x0D                ; Carriage Return
+LF                = %x0A                ; Line Feed
+SP                = %x20                ; Space
+HTAB              = %x09                ; Horizontal Tab
