@@ -1,11 +1,11 @@
-; ABNF file for "YourLanguage"
+; ABNF file for "ZOSL"
 
 ; Rules
 language          = *(comment / group / relationship)
 
 comment           = "//" *(WSP / VCHAR) CRLF
 
-group             = "@" group_name *(WSP / VCHAR) CRLF 1*field CRLF "end" group_name
+group             = "@" group_name *(WSP / VCHAR) CRLF 1*field CRLF "$" group_name CRLF
 
 group_name        = 1*(ALPHA / DIGIT / "-" / "_")
 
