@@ -1,0 +1,27 @@
+; ABNF grammar for ZOSL (Zeeshan's Obviously Stupid Language)
+
+; Rules
+zosl_file     = *WSP (comment / group / relationship) *WSP
+
+comment       = "//" *(VCHAR / WSP) CRLF
+
+group         = "@" group_name *(WSP / VCHAR) CRLF *field CRLF "$end" group_name
+
+group_name    = 1*(ALPHA / DIGIT / "-" / "_")
+
+field         = "[" field_content "]" CRLF
+
+field_content = *WSP *(VCHAR / WSP)
+
+relationship  = "@" group_name WSP "->" WSP "@" group_name CRLF
+
+; ABNF Core Rules
+ALPHA         = %x41-5A / %x61-7A   ; A-Z / a-z
+DIGIT         = %x30-39             ; 0-9
+WSP           = SP / HTAB           ; Whitespace
+VCHAR         = %x21-7E             ; Visible ASCII characters (excluding: SP and CTL)
+CRLF          = CR LF                ; Newline
+CR            = %x0D                ; Carriage Return
+LF            = %x0A                ; Line Feed
+SP            = %x20                ; Space
+HTAB          = %x09                ; Horizontal Tab

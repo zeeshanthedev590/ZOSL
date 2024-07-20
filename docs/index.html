@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOSL - Zeeshan's Obiviously Stupid Language</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-tinted-red {
+            background-color: #fef7e8;
+            /* Adjust the opacity value as needed */
+        }
+
+        .text-base {
+            color: #7b341e;
+        }
+
+        .base-bg {
+            background-color: rgba(191, 71, 34, 1);
+        }
+
+        .border-top {
+            border-color: rgba(191, 71, 34, 1);
+        }
+    </style>
+</head>
+
+
+<body class="text-base">
+    <header class=" text-gray-600 body-font border-solid border-t-[5px] border-top">
+        <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
+            <img src="./Images/logos/logo.svg" class="w-16 h-16" alt="Logo">
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a href='http://github.com/zeeshanthedev590/zosl'
+                    class="mr-0 hover:text-gray-900 mt-3 sm:mt-0 sm:mr-5">Github(Drop a star)</a>
+            </nav>
+        </div>
+        <hr />
+
+    </header>
+    <div class="bg-tinted-red p-10">
+
+        <main class="flex flex-col lg:flex-row justify-between items-center">
+            <div class="flex flex-col">
+
+                <div class="sm:ml-5 flex flex-col xl:items-end xl:flex-row ">
+                    <img src="./Images/logos/logo.svg" alt="logo" class="w-24 mr-2 ml-0 sm:ml-5 lg:w-32">
+                    <code class="text-xs text-orange-800 lg:text-base">[Zeeshan's Obviously Stupid Language]</code>
+                </div>
+                <div class="max-w-lg ml-0 sm:ml-10 text-center lg:text-start">
+                    <h1 class="mt-10 mb-4 font-semibold text-4xl text-left text-orange-900 leading-none tracking-tight">
+                        A Schema design language for idiots.
+                    </h1>
+                    <p class="sm:inline-block hidden">
+
+                        ZOSL is a stupid but useful data representation language which aims to be used majorly as the
+                        modeling language for ZUSDS (Zeeshan's Unanimously Stupid Datastore) and Draw-ZOSL(A
+                        DataModeling
+                        Visualization Tool) to continue the legend
+                    </p>
+                </div>
+            </div>
+            <div class="mt-5 sm:mt-0 mb-10">
+                <img src="./Images/code/sample.png" class="w-full max-w-lg h-auto rounded-lg">
+            </div>
+        </main>
+    </div>
+    <section>
+        <h1 class="text-center p-5 base-bg text-orange-100 text-3xl sm:text-4xl font-semibold">
+            A Quick Tour of ZOSL
+        </h1>
+        <div class="bg-tinted-red p-10 ">
+            <div class="flex flex-col sm:flex-row justify-center items-center">
+                <div class="flex-col ml-5">
+                    <p class="font-semibold text-3xl">
+                        Comments
+                    </p>
+                    <img src="./Images/code/comments.png" class="w-full max-w-lg h-auto rounded-lg">
+                </div>
+                <div class="flex-col ml-10">
+                    <p class="font-semibold text-3xl">
+                        Groups
+                    </p>
+                    <img src="./Images/code/groups.png" class="w-full max-w-lg h-auto rounded-lg">
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center items-center mt-5">
+                <div class="flex-col ml-5">
+                    <p class="font-semibold text-3xl">
+                        Fields
+                    </p>
+                    <img src="./Images/code/fields.png" class="w-full max-w-lg h-auto rounded-lg">
+                </div>
+                <div class="flex-col ml-10">
+                    <p class="font-semibold text-3xl">
+                        Relations
+                    </p>
+                    <img src="./Images/code/relations.png" class="w-full max-w-lg h-auto rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center">
+        <h1 class="text-center p-5 base-bg text-orange-100 text-3xl sm:text-4xl font-semibold">
+            Want more?
+        </h1>
+        <h1 class="text-center p-5 text-3xl sm:text-4xl font-semibold">
+            Take a Look at Draw ZOSL
+        </h1>
+        <p class="text-center mb-5 mx-5">
+            Draw ZOSL allows users to make a visual representation of their schema and data in the form of a local html
+            file using only zosl
+        </p>
+        <a href="https://github.com/zeeshanthedev590/DrawZosl"><button
+                class="p-5 base-bg text-white rounded-full m-2">Check It Out</button></a>
+    </section>
+</body>
+
+
+</html>
